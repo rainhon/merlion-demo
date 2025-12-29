@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
+class Permission extends Model
+{
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+    ];
+
+    /**
+     * 拥有此权限的角色
+     */
+    public function roles(): BelongsToMany
+    {
+        return $this->belongsToMany(Role::class);
+    }
+}

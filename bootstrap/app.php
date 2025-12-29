@@ -12,6 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withProviders([
         \App\Providers\AdminServiceProvider::class,
+        \App\Providers\FieldServiceProvider::class,
     ])
     ->withMiddleware(function (Middleware $middleware): void {
         //
