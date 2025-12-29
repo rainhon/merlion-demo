@@ -32,7 +32,7 @@ class FieldServiceProvider extends ServiceProvider
     protected function registerCustomFields(): void
     {
         $customFields = [
-            'keyvalue' => KeyValue::class,
+            'datetime' => \App\Components\Form\Fields\DateTime::class,
         ];
 
         \Merlion\Components\Form\Fields\Field::$fieldsMap = array_merge(
